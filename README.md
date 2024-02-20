@@ -35,4 +35,23 @@ Abaixo segue a interface da aplicação
    - ClientTypesPage
  
      <img src="info/array_tipo_clientes.png" alt="pagina tipo de clientes" style="width: 100%; display: block;"/>
- 
+
+
+ ## Primeira integração com a single source of true (ssot)
+
+   Adaptação "main()" onde é passado um item de array simulando uma futura carga, na pagina de "ClientsPage()" é feita a remoção do array "clients" assim como adaptada a utilização do provider na apresentação e no botão de adição do "alert dialog". 
+
+   - Alteração na "Main()"
+
+   <img src="info/main.provider.png" alt="" style="width: 100%; display: block;"/>
+
+   - Alteração em "ClientsPage()"
+
+     listview.builder
+
+   <img src="info/listView.builder.provider.png" alt="" style="width: 100%; display: block;"/>
+
+    alertDialog
+
+   <img src="info/alert dialog,actions.textbutton.onpress.consumer.png" alt="" style="width: 100%; display: block;"/>
+
