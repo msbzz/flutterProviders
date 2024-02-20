@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-    create:(context)=>Clients(clients:[ Client(name: 'Geraldo', email: 'leo@email.com', type: ClientType(name: 'Platinum', icon: Icons.credit_card))]),
+    create:(context)=>Clients(clients:[]),
     child:const MyApp(),
   ));
   

@@ -37,7 +37,7 @@ Abaixo segue a interface da aplicação
      <img src="info/array_tipo_clientes.png" alt="pagina tipo de clientes" style="width: 100%; display: block;"/>
 
 
- ## Primeira integração com a single source of true (ssot)
+ ## Integração com a single source of true (ssot)
 
    Adaptação "main()" onde é passado um item de array simulando uma futura carga, na pagina de "ClientsPage()" é feita a remoção do array "clients" assim como adaptada a utilização do provider na apresentação e no botão de adição do "alert dialog". 
 
@@ -54,4 +54,22 @@ Abaixo segue a interface da aplicação
     alertDialog
 
    <img src="info/alert dialog,actions.textbutton.onpress.consumer.png" alt="" style="width: 100%; display: block;"/>
+
+
+ ##  Aplicando boas práticas  
+
+   Se trata ótima prática atribuir a responsabilidade de adicionar, modificar, excluir os dados de uma model para a model, não pelo aplicativo do pois foi só uma forma didática, em vez de chamar o add do lista criar um método para isso na propria classe Clients.
+
+   
+   ClientsPage / add
+
+   <img src="info/clients_page.modiffy.add.png" alt="" style="width: 100%; display: block;"/>
+
+
+   Clients / add
+
+   <img src="info/clients.changeNotifier.add.png" alt="" style="width: 100%; display: block;"/>
+
+
+
 
