@@ -39,7 +39,7 @@ Abaixo segue a interface da aplicação
 
  ## Integração com a single source of true (ssot)
 
-   Adaptação "main()" onde é passado um item de array simulando uma futura carga, na pagina de "ClientsPage()" é feita a remoção do array "clients" assim como adaptada a utilização do provider na apresentação e no botão de adição do "alert dialog". 
+   Adaptação "main()" onde é passado um item de array simulando uma futura carga, na pagina de "ClientsPage()" é feita a remoção do array "clients" assim como adaptada a utilização do provider na apresentação assin como no botão de adição do "alert dialog". 
 
    - Alteração na "Main()"
 
@@ -58,7 +58,7 @@ Abaixo segue a interface da aplicação
 
  ##  Aplicando boas práticas  
 
-   Se trata ótima prática atribuir a responsabilidade de adicionar, modificar, excluir os dados de uma model para a model, não pelo aplicativo do pois foi só uma forma didática, em vez de chamar o add do lista criar um método para isso na propria classe Clients.
+   Se trata ótima prática atribuir a responsabilidade de adicionar, modificar, excluir os dados de um array para a classe model provider, não pelo array pois o controle sobre os dados sempre é necessário .
 
    
    ClientsPage / add
@@ -70,6 +70,40 @@ Abaixo segue a interface da aplicação
 
    <img src="info/clients.changeNotifier.add.png" alt="" style="width: 100%; display: block;"/>
 
+## Aplicando provider em ClientTypePage
+
+Criação de Types()
+
+Adaptação em Main() da utilização de Multiprovider passando como parametro o array de ClientType para a classe Type que sera o provider desta classe
+
+<img src="info/main.provider.png" alt="" style="width: 100%; display: block;"/>
+
+Adaptação de ListView.builder em ClientTypesPage com o widget Consumer  
+
+<img src="info/listView.builder.consumer.png" alt="" style="width: 100%; display: block;"/>
+
+
+Tambem em ClientTypesPage, no widget interno createType, showDialog mais especificamente em actions, TextButton,'salvar', substituição de 'types.add' por ' Provider.of<Types>(context, listen: false).add()' e desativação do setState() já que a classe Types já trata esse ponto.
+
+<img src="info/ClientTypes.alertDialog.actions.salvar.png" alt="" style="width: 100%; display: block;"/>
+
+Inclusão do metodo remove() em CLients() e Types()
+
+  Alteração do codigo no widget Dismissible, na propriedade 'onDismissed' removendo o 'setState()' e adaptando o remove para sendo das classes providers 
+
+<img src="info/clients.changeNotifier.add.png" alt="" style="width: 100%; display: block;"/>
+
+## Outros padrões de providers sugeridos
+
+- BloC
+
+- Redux
+
+## Outras bibliotecas sugeridas
+
+- GetX
+
+- MobX
 
 
 
