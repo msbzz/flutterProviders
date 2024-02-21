@@ -97,13 +97,19 @@ Inclusão do metodo remove() em CLients() e Types()
 
 - BloC
 
+https://pub.dev/packages/flutter_bloc
+
 - Redux
+
+https://pub.dev/packages/flutter_redux
 
 ## Outras bibliotecas sugeridas
 
 - GetX
 
+https://pub.dev/packages/mobx
+
 - MobX
 
-
+https://pub.dev/packages/mobx
 
